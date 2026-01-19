@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Chong Jun Jie | TIS e-Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+        /* --- 1. 修复 Profile 照片 --- */
+        #banner .image {
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 280px;
+            height: 280px;
+            border: 6px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        #banner .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%; 
+            display: block;
+        }
+
+        /* --- 2. 统一 Assignments 照片大小 --- */
+        #asg .image.fit {
+            margin: 0 0 1.5em 0;
+            display: block;
+            width: 100%;
+            height: 350px; 
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        #asg .image.fit img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.4s ease;
+        }
+
+        #asg section:hover .image.fit img {
+            transform: scale(1.05);
+        }
+
+        /* --- 3. 链接样式优化：改为蓝色 --- */
+        /* 针对所有自定义链接类 */
+        .video-link, .pdf-link, .figma-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-right: 15px;
+            font-weight: bold;
+            text-decoration: underline; /* 增加下划线更像超链接 */
+            color: #2196F3 !important; /* 经典蓝色 */
+            transition: color 0.3s ease;
+        }
+
+        /* 鼠标悬停时变为白色 */
+        .video-link:hover, .pdf-link:hover, .figma-link:hover {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+        .video-link i, .pdf-link i, .figma-link i {
+            margin-right: 8px;
+        }
+
+        /* 布局优化 */
+        html { scroll-behavior: smooth; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
+            visibility: hidden;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        #skills .col-6 {
+            transition: transform 0.3s ease;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #skills .col-6:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        #asg section {
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 2em;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid transparent;
+        }
+        #asg section:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="is-preload landing">
+<div id="page-wrapper">
+
+    <header id="header">
+        <h1 id="logo"><a href="index.html">e-Portfolio</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#objective">Future Career</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#asg">Assignments</a></li>
+                <li><a href="#contact" class="button primary">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <div class="content">
+            <header>
+                <h2>Chong Jun Jie</h2>
+                <p>Bachelor of Computer Science (Graphic and Multimedia)<br>
+                   Year 1 Student | Universiti Teknologi Malaysia</p>
+            </header>
+            <span class="image">
+                <img src="images/IMG_1150.JPG" alt="Profile" />
+            </span>
+        </div>
+    </section>
+
+    <section id="about" class="wrapper style1 special reveal">
+        <div class="container">
+            <header class="major">
+                <h2>About Me</h2>
+                <p>I am a Year 1 Computer Science student at Universiti Teknologi Malaysia (UTM).<br /> 
+                I am passionate about game development and creative technology, aiming to build meaningful gaming experiences.</p>
+            </header>
+        </div>
+    </section>
+
+    <section id="objective" class="spotlight style2 right reveal">
+        <span class="image fit main"><img src="images/futurecareer.png" alt="Future Career" /></span>
+        <div class="content">
+            <header><h2>Future Career</h2></header>
+            <p>To pursue a career as a Game Developer and build meaningful gaming experiences.</p>
+        </div>
+    </section>
+
+    <section id="education" class="spotlight style3 left reveal">
+        <span class="image fit main"><img src="images/education.jpg" alt="Education" /></span>
+        <div class="content">
+            <header><h2>Education</h2></header>
+            <h3>Universiti Teknologi Malaysia (UTM)</h3>
+            <p>Bachelor of Computer Science (Graphic and Multimedia)<br>Year 1 (Ongoing)</p>
+        </div>
+    </section>
+
+    <section id="skills" class="wrapper style1 special reveal">
+        <div class="container">
+            <header class="major"><h2>Skills</h2></header>
+            <div class="row gtr-uniform">
+                <section class="col-6 col-12-medium"><h3>Programming</h3><p>C++</p></section>
+                <section class="col-6 col-12-medium"><h3>Tools</h3><p>GitHub, VS Code</p></section>
+                <section class="col-6 col-12-medium"><h3>Soft Skills</h3><p>Teamwork, Communication</p></section>
+                <section class="col-6 col-12-medium"><h3>Languages</h3><p>Malay, English, Chinese</p></section>
+            </div>
+        </div>
+    </section>
+
+    <section id="asg" class="wrapper style2 reveal">
+        <div class="container">
+            <header class="major">
+                <h2>Assignments & Reflection</h2>
+                <p>Technology and Information System (SECP1513)</p>
+            </header>
+
+            <section>
+                <h3>PC Assemble (Lab)</h3>
+                <span class="image fit"><img src="images/lab.jpeg" alt="PC Assemble"></span>
+                <p><strong>Reflection:</strong> Gained hands-on experience in hardware assembly and teamwork.</p>
+            </section>
+
+            <section>
+                <h3>Industry Talk 1</h3>
+                <span class="image fit"><img src="images/talk1.jpg" alt="Talk 1"></span>
+                <p><strong>Reflection:</strong> Learned about the importance of ethics and law in the ICT industry.</p>
+            </section>
+
+            <section>
+                <h3>Industry Talk 2</h3>
+                <p><strong>Reflection:</strong> Gained valuable knowledge about cloud computing and the future trends of digital transformation during this session.</p>
+                <a href="Industry.Talk2.Report.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> View Talk 2 Report (PDF)</a>
+            </section>
+
+            <section>
+                <h3>Industry Visit 1 (UTM Digital)</h3>
+                <span class="image fit"><img src="images/visit1.jpg" alt="Visit 1"></span>
+                <p><strong>Reflection:</strong> Witnessed professional IT infrastructure management in a real-world setting.</p>
+                <a href="https://www.youtube.com/watch?v=xbv79ZG3r8k" class="video-link" target="_blank"><i class="fab fa-youtube"></i> Watch Visit Video</a>
+            </section>
+
+            <section>
+                <h3>Industry Visit 2 (Johor Port)</h3>
+                <span class="image fit"><img src="images/visit2.jpg" alt="Visit 2"></span>
+                <p><strong>Reflection:</strong> Inspired by how large industries integrate AI into their workflows.</p>
+            </section>
+
+            <section>
+                <h3>Design Thinking</h3>
+                <span class="image fit"><img src="images/designthinking.jpg" alt="Design Thinking"></span>
+                <p><strong>Reflection:</strong> Improved problem-solving skills through iterative prototyping.</p>
+                <a href="https://www.youtube.com/watch?v=a2B5yjDJKkA" class="video-link" target="_blank"><i class="fab fa-youtube"></i> Watch Project Video</a>
+                <br>
+                <a href="https://stand-union-51665204.figma.site" class="figma-link" target="_blank"><i class="fab fa-figma"></i> Figma Link 1</a>
+                <a href="https://radio-decay-38175623.figma.site" class="figma-link" target="_blank"><i class="fab fa-figma"></i> Figma Link 2</a>
+            </section>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <section id="contact">
+            <header class="major"><h2>Contact</h2></header>
+            <p>📧 Email: chongjun.jie@graduate.utm.my</p>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jun-jie-chong-a288a43a5/" class="icon brands fa-linkedin-in"></a></li>
+                <li><a href="https://github.com/Cjunjie23" class="icon brands fa-github"></a></li>
+            </ul>
+        </section>
+        <ul class="copyright"><li>© 2026 Chong Jun Jie</li></ul>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+</body>
+</html>
